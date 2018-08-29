@@ -2,7 +2,7 @@
 const Gdax = require('gdax');
 
 // this is the url for the api
-const url = 'https://api-public.sandbox.pro.coinbase.com';
+const url = 'https://api.sandbox.pro.coinbase.com';
 
 // this is used to access the coinbase.pro public api endpoints
 const publicClient = new Gdax.PublicClient(url);
@@ -50,6 +50,7 @@ function checkMinimumSize(size, pair) {
     'ETH': '.01',
     'LTC': '.1',
     'BCH': '.01',
+    'ETC': '.01',
   };
   return (parseFloat(size) >= parseFloat(minimum[pair]));
 }
