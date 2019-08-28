@@ -64,7 +64,7 @@ function sweepAccounts() {
     // loop through each account
     accounts.map(account => {
       // sets a bool where it only returns true for btc/eth/ltc/bch wallet
-      let isCrypto = account.currency === 'BTC' || account.currency === 'ETH' || account.currency === 'LTC' ||
+      let isCrypto = account.currency === 'BTC' || account.currency === 'ETH' || account.currency === 'LTC'
       // if the account is greater than or equal to minimum order size for the specific crypto and is a crypto
       if (checkMinimumSize(account.balance, account.currency) && isCrypto) {
         // prints on console the account balance and the account currency symbol
