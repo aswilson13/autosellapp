@@ -35,7 +35,7 @@ function main() {
   .catch(err => {
     // error catching in case something went wrong. prints the error message and error object in the console.
     console.log('Uh-oh. Something went wrong!');
-    console.log(err);
+    console.log(err.data);
     // this stops the time loop and allows us to troubleshoot without wiping out the heroku logs
     clearInterval(timerId);
     timerId = null;  
@@ -80,7 +80,7 @@ function sweepAccounts() {
   .catch(err => {
     // error catching in case something went wrong. prints the error message and error object in the console.
     console.log('Uh-oh. Something went wrong!');
-    console.log(err);
+    console.log(err.data);
     // this stops the time loop and allows us to troubleshoot without wiping out the heroku logs
     clearInterval(timerId);  
     timerId = null;  
@@ -137,7 +137,7 @@ function convertToFiat() {
       .catch(err => {
         // error catching in case something went wrong. prints the error message and error object in the console.
         console.log('Uh-oh. Something went wrong!');
-        console.log(err);
+        console.log(err.data);
         // this stops the time loop and allows us to troubleshoot without wiping out the heroku logs
         clearInterval(timerId); 
         timerId = null;   
@@ -168,7 +168,7 @@ function fireSellOrder(param, pair, size) {
   .catch(err => {
     // error catching in case something went wrong. prints the error message and error object in the console.
     console.log('Uh-oh. Something went wrong!');
-    console.log(err);
+    console.log(err.data);
     // this stops the time loop and allows us to troubleshoot without wiping out the heroku logs
     clearInterval(timerId);  
     timerId = null;  
